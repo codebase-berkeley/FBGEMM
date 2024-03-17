@@ -44,6 +44,7 @@ bool EmbeddingSpMDMNBit_autovec(
     const bool scale_bias_last /*=true*/,
     const bool is_bf16_out /*=false*/) {
   assert((bit_rate == 2 || bit_rate == 4) && "bit_rate must be 2 or 4");
+  printf("Hello World\n");
   const int num_elem_per_byte = 8 / bit_rate;
 
   if (output_stride == -1) {
