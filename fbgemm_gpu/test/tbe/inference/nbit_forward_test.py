@@ -1095,7 +1095,7 @@ class NBitFowardTest(unittest.TestCase):
             T = random.randint(1, 50)
             B = random.randint(0, 128)
             L = random.randint(0, 32)
-            D = andom.randint(2, 2048)
+            D = random.randint(2, 2048)
             log_E = random.randint(2, 4)
 
             use_cache = False
