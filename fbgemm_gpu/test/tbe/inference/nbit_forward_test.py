@@ -1092,10 +1092,10 @@ class NBitFowardTest(unittest.TestCase):
             output_dtype: SparseType,
         ) -> None:
             use_cpu = True
-            T = 20 # random.randint(1, 50)
-            B = 32 # random.randint(0, 128)
-            L = 16 # random.randint(0, 32)
-            D = 64 # random.randint(2, 2048)
+            T = random.randint(1, 50)
+            B = random.randint(0, 128)
+            L = random.randint(0, 32)
+            D = andom.randint(2, 2048)
             log_E = random.randint(2, 4)
 
             use_cache = False
