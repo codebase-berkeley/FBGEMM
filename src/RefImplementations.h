@@ -268,7 +268,7 @@ template <
     typename IndexType = std::int64_t,
     typename OffsetType = std::int32_t,
     typename OutType = float>
-bool EmbeddingSpMDMFP8_ref(
+bool EmbeddingSpMDMFP8_autovec(
     const int64_t block_size,
     const int64_t output_size,
     const int64_t index_size,
