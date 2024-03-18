@@ -1301,7 +1301,7 @@ typename EmbeddingSpMDMKernelSignature<uint8_t, indxType, offsetType, outType>::
              const offsetType* offsets_or_lengths,
              const float* weights,
              outType* out) {
-    return EmbeddingSpMDMFP8_autovec(
+    return EmbeddingSpMDMFP8_ref(
         block_size,
         output_size,
         index_size,

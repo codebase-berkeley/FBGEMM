@@ -309,6 +309,26 @@ bool EmbeddingSpMDMFP8_autovec(
       int64_t input_stride,                                       \
       const bool scale_bias_last,                                 \
       const bool is_bf16_out);
+  
+#define INSTANTIATE_SPMDM_BASE(INDEX_TYPE, OFFSET_TYPE, OUT_TYPE) \
+  template FBGEMM_API bool EmbeddingSpMDMFP8_autovec(             \
+      const int64_t block_size,                                   \
+      const int64_t output_size,                                  \
+      const int64_t index_size,                                   \
+      const int64_t data_size,                                    \
+      const uint8_t* input,                                       \
+      const IndexType* indices,                                   \
+      const OffsetType* offsets_or_lengths,                       \
+      const float* weights,                                       \
+      bool normalize_by_lengths,                                  \
+      OutType* out,                                               \
+      bool is_weight_positional,                                  \
+      bool use_offsets,                                           \
+      int64_t output_stride,                                      \
+      int64_t input_stride,                                       \
+      int exponent_bits,                                          \
+      int exponent_bias,                                          \
+      bool is_bf16_out);
 
 #define INSTANTIATE_SPMDM_OUT_T(INDEX_TYPE, OFFSET_TYPE) \
   INSTANTIATE_SPMDM_BASE(INDEX_TYPE, OFFSET_TYPE, float) \
